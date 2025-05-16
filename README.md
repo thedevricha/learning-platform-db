@@ -72,7 +72,8 @@ online-learning-database/
 - Prepared for future expansion (audit logging, triggers, analytics)
 
 📁 SQL File:
-- [`schema/01_create_tables.sql`](./schema/01_create_tables.sql)
+- [`schema/01_create_database.sql`](./schema/01_create_database.sql)
+- [`schema/02_create_tables.sql`](./schema/02_create_tables.sql)
 
 ---
 
@@ -87,7 +88,7 @@ online-learning-database/
   - Reviews, payments, and certificates
 
 📁 SQL File:
-- [`schema/02_insert_sample_data.sql`](./schema/02_insert_sample_data.sql)
+- [`schema/03_insert_data.sql`](./schema/03_insert_data.sql)
 
 ⚠️ Note: Ensure file paths are correct and `\COPY` statements are run from `psql` or a client that supports them.
 
@@ -121,10 +122,10 @@ Coming up:
 ```bash
 # Open PostgreSQL terminal or pgAdmin
 -- Step 1: Create Tables
-\i schema/01_create_tables.sql
+\i schema/02_create_tables.sql
 
 -- Step 2: Insert Sample Data
-\i schema/02_insert_sample_data.sql
+\i schema/03_insert_data.sql
 ```
 ---
 ## 🔗 License
