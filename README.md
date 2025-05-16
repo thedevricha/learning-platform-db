@@ -56,3 +56,8 @@ online-learning-database/
 ├── procedures/
 ├── views/
 └── docs/
+```
+
+---
+🔗 License
+MIT License – free for personal and professional use.
