@@ -128,5 +128,10 @@ Coming up:
 \i schema/03_insert_data.sql
 ```
 ---
+## 👨‍💻 Author
+
+Built by Richa as a production-grade SQL-only backend project to demonstrate real-world PostgreSQL expertise.
+> For feedback, contributions, or collaboration, feel free to reach out via GitHub or LinkedIn.
+---
 ## 🔗 License
 MIT License – free for personal and professional use.

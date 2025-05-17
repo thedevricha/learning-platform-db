@@ -4,56 +4,56 @@ FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\users.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Instructors
-COPY instructors
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\instructors.csv'
+COPY instructor
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\instructor.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Students
-COPY students
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\students.csv'
+COPY student
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\student.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Course Categories
-COPY course_categories
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\course_categories.csv'
+COPY course_category
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\course_category.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Courses
-COPY courses
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\courses.csv'
+COPY course
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\course.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Enrollment
-COPY enrollments
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\enrollments.csv'
+COPY enrollment
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\enrollment.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Lessons
-COPY lessons
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\lessons.csv'
+COPY lesson
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\lesson.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Assignments
-COPY assignments
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\assignments.csv'
+COPY assignment
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\assignment.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Submissions (only for past due dates and enrolled students)
-COPY submissions
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\submissions.csv'
+COPY submission
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\submission.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Reviews
-COPY reviews
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\reviews.csv'
+COPY review
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\review.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Payments
-COPY payments
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\payments.csv'
+COPY payment
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\payment.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- Generate Certificate
-COPY certificates
-FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\certificates.csv'
+COPY certificate
+FROM 'C:\wamp64\www\learning\learning-platform-db\csv_files\certificate.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
