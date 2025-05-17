@@ -106,6 +106,17 @@ Wrote 10 foundational SQL queries covering:
 📁 SQL File:
 - [`queries/01_beginner_queries.sql`](./queries/01_beginner_queries.sql)
 
+## 📊 PHASE 5 – Intermediate SQL Queries
+
+Tackled complex business logic using:
+- Multi-table joins
+- Aggregations (`SUM`, `COUNT`, `AVG`)
+- `GROUP BY` + `HAVING` filters
+- Revenue and user engagement analytics
+
+📁 SQL File:
+- [`queries/02_intermediate_queries.sql`](./queries/02_intermediate_queries.sql)
+
 ## 📌 How to Run
 1. Clone the repo:
   ```bash

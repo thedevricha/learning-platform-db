@@ -1,8 +1,6 @@
 -- =====================
 -- Beginner Queries (10 Tasks)
--- Focus: SELECT, WHERE, JOIN, ORDER BY, GROUP BY, LIMIT
 -- =====================
-
 
 
 /* Select All data from Tables */
