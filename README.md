@@ -39,7 +39,7 @@ This project exists to:
 
 ---
 
-## 🗂 Directory Structure (Coming Soon)
+## 🗂 Directory Structure
 
 ```bash
 online-learning-database/
@@ -53,7 +53,7 @@ online-learning-database/
 
 ## ✅ Project Phases
 
-### 📐 PHASE 2: ERD Design
+### 📐 PHASE 1: ERD Design
 
 - Designed a complete **Entity Relationship Diagram (ERD)** using [dbdiagram.io](https://dbdiagram.io/)
 - Modeled all key entities: `User`, `Student`, `Instructor`, `Course`, `Lesson`, `Enrollment`, `Review`, `Assignment`, `Submission`, `Payment`, `Certificate`, `CourseCategory`, and an audit log table.
@@ -62,7 +62,7 @@ online-learning-database/
 
 ---
 
-### 🏗️ PHASE 3: Schema Creation
+### 🏗️ PHASE 2: Schema Creation
 
 - Created all tables using **PostgreSQL syntax** with:
   - `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, `CHECK` constraints
@@ -72,12 +72,12 @@ online-learning-database/
 - Prepared for future expansion (audit logging, triggers, analytics)
 
 📁 SQL File:
-- [`schema/01_create_database.sql`](./schema/01_create_database.sql)
-- [`schema/02_create_tables.sql`](./schema/02_create_tables.sql)
+- Database Creation [`schema/01_create_database.sql`](./schema/01_create_database.sql)
+- Table Creation [`schema/02_create_tables.sql`](./schema/02_create_tables.sql)
 
 ---
 
-### 📥 PHASE 4: Sample Data Insertion
+### 📥 PHASE 3: Sample Data Insertion
 
 - Loaded test data using `COPY` for local CSV import
 - Ensured correct insert order to respect foreign key dependencies
@@ -94,39 +94,29 @@ online-learning-database/
 
 ---
 
-## 🔍 Features Covered (So Far)
+## 🔍 PHASE 4 – Beginner SQL Queries
 
-| Feature                     | SQL Concepts Used                                      |
-|----------------------------|--------------------------------------------------------|
-| Relational schema design   | `PRIMARY KEY`, `FOREIGN KEY`, normalization            |
-| Constraints & validation   | `NOT NULL`, `CHECK`, `UNIQUE`                         |
-| Auto-generated keys        | `GENERATED ALWAYS AS IDENTITY`                        |
-| Indexing                   | `CREATE INDEX` on foreign keys and lookup fields       |
-| Data import                | `COPY FROM CSV`                                        |
-| Cascade behavior           | `ON DELETE CASCADE` for cleanup logic                  |
+Wrote 10 foundational SQL queries covering:
+- Joins (INNER)
+- Filtering (`WHERE`, `LIKE`)
+- Sorting (`ORDER BY`)
+- Nested selections (`IN`)
+- Date filtering with `INTERVAL`
 
----
+📁 SQL File:
+- [`queries/01_beginner_queries.sql`](./queries/01_beginner_queries.sql)
 
-## 🔄 Next Steps
-
-Coming up:
-- PHASE 5: Complex Queries & Reporting (`JOIN`, `GROUP BY`, CTEs, `RANK()`, `AVG()`, `WINDOW FUNCTIONS`)
-- PHASE 6: Stored Procedures, Triggers, and Views
-- PHASE 7: Materialized Views for recommendations
-- PHASE 8: Performance Optimizations & Analytics
-
----
-
-## 🏁 How to Run
-
-```bash
-# Open PostgreSQL terminal or pgAdmin
--- Step 1: Create Tables
-\i schema/02_create_tables.sql
-
--- Step 2: Insert Sample Data
-\i schema/03_insert_data.sql
-```
+## 📌 How to Run
+1. Clone the repo:
+   ```bash
+  git clone https://github.com/thedevricha/learning-platform-db.git
+  cd online-learning-database
+  ```
+2. Connect to PostgreSQL and run:
+  - schema/01_create_database.sql
+  - schema/02_create_tables.sql
+  - schema/03_insert_data.sql
+  - Explore with queries/01_beginner_queries.sql
 ---
 ## 👨‍💻 Author
 
@@ -134,4 +124,4 @@ Built by Richa as a production-grade SQL-only backend project to demonstrate rea
 > For feedback, contributions, or collaboration, feel free to reach out via GitHub or LinkedIn.
 ---
 ## 🔗 License
-MIT License – free for personal and professional use.
+MIT License – Use freely for your learning.
