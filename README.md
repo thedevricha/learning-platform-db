@@ -108,9 +108,9 @@ Wrote 10 foundational SQL queries covering:
 
 ## 📌 How to Run
 1. Clone the repo:
-   ```bash
-  git clone https://github.com/thedevricha/learning-platform-db.git
-  cd online-learning-database
+  ```bash
+    git clone https://github.com/thedevricha/learning-platform-db.git
+    cd online-learning-database
   ```
 2. Connect to PostgreSQL and run:
   - schema/01_create_database.sql
