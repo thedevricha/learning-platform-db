@@ -86,7 +86,7 @@ BEGIN
 END;
 $$;
 
--- Example usage:
+-- Call procedure:
 CALL enroll_student_with_payment(1, 2);
 
 -- Check data
@@ -138,7 +138,7 @@ EXCEPTION
 END;
 $$;
 
--- Example usage:
+-- Call procedure:
 CALL insert_course_category('PHP', 'PHP programming language courses');
 CALL insert_course_category_v2('Software Development', 'Software Development courses');
 
