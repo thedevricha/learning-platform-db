@@ -117,6 +117,21 @@ Tackled complex business logic using:
 📁 SQL File:
 - [`queries/02_intermediate_queries.sql`](./queries/02_intermediate_queries.sql)
 
+## 📊 Phase 7: Advanced SQL Concepts
+### 🔐 Transactions & Savepoints
+- Implemented full transaction blocks to maintain data consistency
+- Use Cases: Safely enroll a student into a course AND record a payment. If one fails, both should fail. Included optional welcome review using SAVEPOINT.
+
+📁 SQL File:
+- [`queries/advanced/transaction_queries.sql`](./queries/advanced/transaction_queries.sql)
+
+### 🔁 Triggers
+- Built AFTER INSERT triggers to automatically issue a certificate when a student submits their last pending assignment for a course.
+- Trigger for optional automation for logging certificate data AFTER INSERT
+
+📁 SQL File:
+- [`procedures/trigger_issue_certificate.sql`](./procedures/trigger_issue_certificate.sql)
+
 ## 📌 How to Run
 1. Clone the repo:
   ```bash
@@ -127,7 +142,11 @@ Tackled complex business logic using:
   - schema/01_create_database.sql
   - schema/02_create_tables.sql
   - schema/03_insert_data.sql
-  - Explore with queries/01_beginner_queries.sql
+  - Explore with 
+    - queries/01_beginner_queries.sql
+    - queries/02_intermediate_queries.sql
+    - queries/advanced/transaction_queries.sql
+    - procedures/trigger_issue_certificate.sql
 ---
 ## 👨‍💻 Author
 
