@@ -1,157 +1,96 @@
-# 🎓 Online Learning Platform – PostgreSQL Backend Only
+# 🎓 Online Learning Platform — Database-Only Backend (PostgreSQL)
+A robust PostgreSQL-based backend for an online learning platform — think of a mini Udemy/Coursera clone, built entirely using SQL only.
+> 📘 This project is built for serious SQL learners who want hands-on practice in real-world database design, query writing, performance optimization, and access control.
 
-## 📘 Project Overview
 
-This project is a **SQL-only backend** for a simulated **online learning platform**, inspired by platforms like Udemy or Coursera.  
-It is designed to model the full database layer — including users, courses, lessons, enrollments, reviews, payments, and reporting — using only **PostgreSQL**.
+## 📌 Project Overview
 
-> This is a real-world, production-style relational schema built with serious intent: to showcase SQL skills from **beginner to advanced** levels.
+This project focuses purely on the database layer of an online education platform. It simulates how users (students, instructors, admins) interact with courses, enrollments, payments, and certifications — entirely driven by SQL.
 
----
-
-## 🧱 Tech Stack
-
-- **Database:** PostgreSQL 15+
-- **Languages:** Pure SQL (DDL, DML, Views, Functions, Triggers, CTEs, Window Functions)
-- **Tooling:** dbdiagram.io / drawSQL (for ERD)
+Whether you're aiming to master PostgreSQL, prepare for a technical interview, or showcase your portfolio-ready project on GitHub/LinkedIn — this is built for you.
 
 ---
 
-## 🎯 Purpose
-
-This project exists to:
-
-- Build a complete, **scalable** database model using only SQL
-- Demonstrate mastery of **relational data modeling**, **query optimization**, and **PostgreSQL-specific features**
-- Simulate a complex, realistic use case that would exist in a **production-grade SaaS application**
-- Provide a **portfolio-worthy** project for developers, database engineers, or backend-focused full-stack developers
-
----
-
-## 🧪 What’s Included
-
-✔ Full relational schema  
-✔ Sample realistic data  
-✔ Simple and advanced SQL queries  
-✔ Triggers and stored procedures  
-✔ Views and materialized views  
-✔ Analytical queries for reporting
-
----
-
-## 🗂 Directory Structure
+## 🗂 Repository Structure
 
 ```bash
-online-learning-database/
-├── README.md
+learning-platform-db/
+│
+├── csv_files/                    # Sample CSVs for realistic data
+│
+├── docs/
+│   └── ERD.png                   # ER Diagram of the full schema
+│
 ├── schema/
-├── queries/
+│   ├── 01_create_database.sql    # Database creation
+│   ├── 02_create_tables.sql      # Full schema creation
+│   └── 03_insert_data.sql        # Sample data insertion
+│
 ├── procedures/
+│   └── enroll_student_with_payment.sql  # Stored procedure for enrollment
+│
+├── queries/
+│   ├── 01_beginner_queries.sql         # 10 beginner-level tasks
+│   ├── 02_intermediate_queries.sql     # 10 intermediate tasks
+│   └── advanced/
+│       ├── cte_queries.sql             # CTE-based practicals
+│       ├── transaction_queries.sql     # Transaction management
+│       ├── trigger_issue_certificate.sql # Triggers & certification logic
+│       └── windows_function.sql        # Window functions in action
+│
+├── security/
+│   ├── init_roles.sql                  # Role-based access control
+│   ├── row_level_security.sql          # RLS implementation
+│   ├── test_admin_access.sql
+│   ├── test_instructor_access.sql
+│   └── test_student_access.sql
+│
 ├── views/
-└── docs/
+│   ├── materialized_views.sql
+│   └── views.sql                       # Read-optimized views
+│
+└── .gitignore
+
 ```
+## 🧠 Key Features & Concepts Covered
+- ✅ Normalized relational schema design
+- ✅ Hands-on with stored procedures, triggers, transactions
+- ✅ Role-based & row-level security (RLS) access management
+- ✅ Use of views and materialized views for performance
+- ✅ Practical SQL query challenges from beginner to advanced
+- ✅ Realistic sample data using CSVs
 
-## ✅ Project Phases
+## 🖼️ Entity Relationship Diagram
+![ERD](docs\ERD.png)
+*ERD for project schema*
 
-### 📐 PHASE 1: ERD Design
-
-- Designed a complete **Entity Relationship Diagram (ERD)** using [dbdiagram.io](https://dbdiagram.io/)
-- Modeled all key entities: `User`, `Student`, `Instructor`, `Course`, `Lesson`, `Enrollment`, `Review`, `Assignment`, `Submission`, `Payment`, `Certificate`, `CourseCategory`, and an audit log table.
-- Normalized and optimized for relational integrity and scalability.
-- 📎 [View ERD Diagram](./docs/ERD.png)
-
----
-
-### 🏗️ PHASE 2: Schema Creation
-
-- Created all tables using **PostgreSQL syntax** with:
-  - `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, `CHECK` constraints
-  - `ON DELETE CASCADE` behavior for referential integrity
-  - Identity columns (`GENERATED ALWAYS AS IDENTITY`)
-- Added **smart indexing** on high-traffic and join-heavy columns
-- Prepared for future expansion (audit logging, triggers, analytics)
-
-📁 SQL File:
-- Database Creation [`schema/01_create_database.sql`](./schema/01_create_database.sql)
-- Table Creation [`schema/02_create_tables.sql`](./schema/02_create_tables.sql)
-
----
-
-### 📥 PHASE 3: Sample Data Insertion
-
-- Loaded test data using `COPY` for local CSV import
-- Ensured correct insert order to respect foreign key dependencies
-- Populated key tables with realistic dummy records:
-  - Users (students and instructors)
-  - Courses, lessons, enrollments
-  - Assignments and submissions
-  - Reviews, payments, and certificates
-
-📁 SQL File:
-- [`schema/03_insert_data.sql`](./schema/03_insert_data.sql)
-
-⚠️ Note: Ensure file paths are correct and `\COPY` statements are run from `psql` or a client that supports them.
-
----
-
-## 🔍 PHASE 4 – Beginner SQL Queries
-
-Wrote 10 foundational SQL queries covering:
-- Joins (INNER)
-- Filtering (`WHERE`, `LIKE`)
-- Sorting (`ORDER BY`)
-- Nested selections (`IN`)
-- Date filtering with `INTERVAL`
-
-📁 SQL File:
-- [`queries/01_beginner_queries.sql`](./queries/01_beginner_queries.sql)
-
-## 📊 PHASE 5 – Intermediate SQL Queries
-
-Tackled complex business logic using:
-- Multi-table joins
-- Aggregations (`SUM`, `COUNT`, `AVG`)
-- `GROUP BY` + `HAVING` filters
-- Revenue and user engagement analytics
-
-📁 SQL File:
-- [`queries/02_intermediate_queries.sql`](./queries/02_intermediate_queries.sql)
-
-## 📊 Phase 7: Advanced SQL Concepts
-### 🔐 Transactions & Savepoints
-- Implemented full transaction blocks to maintain data consistency
-- Use Cases: Safely enroll a student into a course AND record a payment. If one fails, both should fail. Included optional welcome review using SAVEPOINT.
-
-📁 SQL File:
-- [`queries/advanced/transaction_queries.sql`](./queries/advanced/transaction_queries.sql)
-
-### 🔁 Triggers
-- Built AFTER INSERT triggers to automatically issue a certificate when a student submits their last pending assignment for a course.
-- Trigger for optional automation for logging certificate data AFTER INSERT
-
-📁 SQL File:
-- [`procedures/trigger_issue_certificate.sql`](./procedures/trigger_issue_certificate.sql)
-
-## 📌 How to Run
-1. Clone the repo:
+## 🚀 Getting Started
+1. Clone the repository
   ```bash
-    git clone https://github.com/thedevricha/learning-platform-db.git
-    cd online-learning-database
+  git clone https://github.com/thedevricha/learning-platform-db.git
+  cd learning-platform-db
   ```
-2. Connect to PostgreSQL and run:
-  - schema/01_create_database.sql
-  - schema/02_create_tables.sql
-  - schema/03_insert_data.sql
-  - Explore with 
-    - queries/01_beginner_queries.sql
-    - queries/02_intermediate_queries.sql
-    - queries/advanced/transaction_queries.sql
-    - procedures/trigger_issue_certificate.sql
+2. Create the database and schema
+Run SQL files in the following order using psql or your preferred tool:
+```sql
+\i schema/01_create_database.sql
+\i schema/02_create_tables.sql
+\i schema/03_insert_data.sql
+```
+3. Explore queries and procedures
+Start with `queries/01_beginner_queries.sql` and move up.
+---
+
+## 📌 How to Showcase
+
+This project is **LinkedIn/GitHub-ready**. Here's how you can highlight it:
+
+> 🧑‍💼 “Built a complete SQL-only backend for an online learning platform. Implemented role-based access control, complex business logic using triggers and stored procedures, and optimized read performance using materialized views and window functions.”
+
 ---
 ## 👨‍💻 Author
-
 Built by Richa as a production-grade SQL-only backend project to demonstrate real-world PostgreSQL expertise.
 > For feedback, contributions, or collaboration, feel free to reach out via GitHub or LinkedIn.
 ---
 ## 🔗 License
-MIT License – Use freely for your learning.
+This project is open-source and available for learning purposes. Free to use with attribution.
