@@ -50,6 +50,7 @@ LEFT JOIN enrollment e ON c.id = e.course_id
 GROUP BY c.id, c.title;
 
 /* Step 2: Query the Dashboard View */
+EXPLAIN ANALYZE
 SELECT * FROM course_dashboard_summary ORDER BY enrolled_students DESC;
 
 /* Step 3: Refresh the View When Needed */
@@ -63,3 +64,12 @@ Automate Refresh with:
 
 /* Step 4 (Optional): Add Index for Fast Filtering */
 CREATE INDEX idx_course_dashboard_course_id ON course_dashboard_summary (course_id);
+
+EXPLAIN ANALYZE
+SELECT
+    c.id AS course_id,
+    c.title,
+    COUNT(e.student_id) AS student_count
+FROM course c
+LEFT JOIN enrollment e ON c.id = e.course_id
+GROUP BY c.id, c.title;
