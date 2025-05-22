@@ -1,6 +1,6 @@
 # 🎓 Online Learning Platform — Database-Only Backend (PostgreSQL)  
-
 A complete SQL database project I built to advance my PostgreSQL skills and showcase advanced database design capabilities.
+
 ---
 
 
@@ -13,6 +13,7 @@ I developed this complete database backend for an online learning platform (simi
 - **Performance optimization** through indexing and materialized views 
 
 This project shows my dedication to studying database fundamentals and acts as a learning resource for other SQL enthusiasts.
+
 ---
 
 
