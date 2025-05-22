@@ -61,7 +61,7 @@ learning-platform-db/
 - ✅ Realistic sample data using CSVs
 
 ## 🖼️ Entity Relationship Diagram
-![ERD](docs\ERD.png)
+![ERD](docs/ERD.png)
 *ERD for project schema*
 
 ## 🚀 Getting Started
@@ -87,10 +87,13 @@ This project is **LinkedIn/GitHub-ready**. Here's how you can highlight it:
 
 > 🧑‍💼 “Built a complete SQL-only backend for an online learning platform. Implemented role-based access control, complex business logic using triggers and stored procedures, and optimized read performance using materialized views and window functions.”
 
+
 ---
 ## 👨‍💻 Author
 Built by Richa as a production-grade SQL-only backend project to demonstrate real-world PostgreSQL expertise.
 > For feedback, contributions, or collaboration, feel free to reach out via GitHub or LinkedIn.
+
+
 ---
 ## 🔗 License
 This project is open-source and available for learning purposes. Free to use with attribution.
